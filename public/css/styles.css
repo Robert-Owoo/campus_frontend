@@ -1,0 +1,205 @@
+/* Global Variables */
+:root {
+    --primary-color: #4e54c8; /* Deep Indigo */
+    --secondary-color: #8f94fb; /* Soft Lavender */
+    --accent-color: #ff6e7f; /* Coral Pink */
+    --bg-gradient-start: #4e54c8;
+    --bg-gradient-end: #8f94fb;
+    --text-color: #2c3e50;
+    --light-bg: #f0f2f5;
+    --card-bg: #ffffff;
+    --border-color: #e0e0e0;
+    --radius: 8px;
+    --transition-speed: 0.3s;
+}
+
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+    background: var(--light-bg);
+    line-height: 1.6;
+}
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: color var(--transition-speed);
+}
+a:hover {
+    color: var(--accent-color);
+}
+
+/* Navbar */
+.navbar {
+    background: linear-gradient(90deg, var(--bg-gradient-start), var(--bg-gradient-end));
+    padding: 1rem 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar h1 {
+    font-size: 1.75rem;
+    color: #fff;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+.nav-links a {
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius);
+    background: rgba(255,255,255,0.1);
+    transition: background var(--transition-speed);
+}
+.nav-links a:hover,
+.nav-links a.active {
+    background: rgba(255,255,255,0.2);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: var(--radius);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background var(--transition-speed), transform var(--transition-speed);
+}
+.btn-primary {
+    background: var(--primary-color);
+    color: #fff;
+}
+.btn-primary:hover {
+    background: var(--accent-color);
+    transform: translateY(-2px);
+}
+.btn-secondary {
+    background: var(--secondary-color);
+    color: #fff;
+}
+.btn-secondary:hover {
+    background: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* Cards & Sections */
+.card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    transition: transform var(--transition-speed);
+}
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Forms */
+.form-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+.form-group {
+    margin-bottom: 1.5rem;
+}
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    font-size: 1rem;
+    transition: border-color var(--transition-speed);
+}
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+/* Tables */
+.table-container {
+    overflow-x: auto;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th,
+td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+th {
+    background: var(--light-bg);
+    font-weight: 700;
+}
+tr:hover {
+    background: rgba(0,0,0,0.02);
+}
+
+/* Responsive Grid */
+.row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+    .navbar .container {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: var(--card-bg);
+    border-top: 1px solid var(--border-color);
+    margin-top: 2rem;
+}
+.footer p {
+    color: var(--text-color);
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Hostel Management - Admin Dashboard</title>
+    <link rel="stylesheet" href="public/css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <h1>Campus Hostel Management</h1>
+            <div class="nav-links">
+                <a href="admin-dashboard.html" class="active">Dashboard</a>
+                <a href="#" id="logoutBtn">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="dashboard-container">
+            <h2>Admin Dashboard</h2>
+            
+            <div class="dashboard-section">
+                <h3>Applications</h3>
+                <div class="filters">
+                    <select id="statusFilter">
+                        <option value="">All Status</option>
+                        <option value="pending">Pending</option>
+                        <option value="approved">Approved</option>
+                        <option value="rejected">Rejected</option>
+                        <option value="assigned">Assigned</option>
+                    </select>
+                </div>
+                <div id="applicationsList" class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Student</th>
+                                <th>Hostel</th>
+                                <th>Room Type</th>
+                                <th>Status</th>
+                                <th>Date</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="applicationsTableBody">
+                            <!-- Applications will be populated here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="dashboard-section">
+                <h3>Room Assignments</h3>
+                <div id="assignmentsList" class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Student</th>
+                                <th>Hostel</th>
+                                <th>Room</th>
+                                <th>Start Date</th>
+                                <th>End Date</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="assignmentsTableBody">
+                            <!-- Assignments will be populated here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="public/js/app.js"></script>
+    <script src="public/js/admin-dashboard.js"></script>
+</body>
+</html> 

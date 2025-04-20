@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Hostel Management - Apply</title>
+    <link rel="stylesheet" href="public/css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <h1>Campus Hostel Management</h1>
+            <div class="nav-links">
+                <a href="student-dashboard.html">Dashboard</a>
+                <a href="application.html" class="active">Apply</a>
+                <a href="#" id="logoutBtn">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="application-container">
+            <h2>Hostel Application</h2>
+            <form id="applicationForm" class="application-form">
+                <div class="form-group">
+                    <label for="hostel">Select Hostel</label>
+                    <select id="hostel" name="hostel" required>
+                        <option value="">Select a hostel</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="roomType">Preferred Room Type</label>
+                    <select id="roomType" name="preferredRoomType" required>
+                        <option value="">Select room type</option>
+                        <option value="single">Single Room</option>
+                        <option value="double">Double Room</option>
+                        <option value="triple">Triple Room</option>
+                        <option value="quad">Quad Room</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="notes">Additional Notes</label>
+                    <textarea id="notes" name="additionalNotes" rows="4"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit Application</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="public/js/app.js"></script>
+    <script src="public/js/application.js"></script>
+</body>
+</html> 

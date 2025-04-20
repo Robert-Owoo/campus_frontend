@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Hostel Management - Student Dashboard</title>
+    <link rel="stylesheet" href="public/css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <h1>Campus Hostel Management</h1>
+            <div class="nav-links">
+                <a href="student-dashboard.html" class="active">Dashboard</a>
+                <a href="application.html">Apply</a>
+                <a href="#" id="logoutBtn">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="dashboard-container">
+            <h2>Welcome, <span id="studentName"></span>!</h2>
+            
+            <div class="dashboard-section">
+                <h3>Your Applications</h3>
+                <div id="applicationsList" class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Hostel</th>
+                                <th>Room Type</th>
+                                <th>Status</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody id="applicationsTableBody">
+                            <!-- Applications will be populated here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="dashboard-section">
+                <h3>Your Room Assignment</h3>
+                <div id="assignmentDetails" class="assignment-container">
+                    <!-- Assignment details will be populated here -->
+                </div>
+            </div>
+
+            <div class="dashboard-actions">
+                <a href="application.html" class="btn btn-primary">New Application</a>
+            </div>
+        </div>
+    </main>
+
+    <script src="public/js/app.js"></script>
+    <script src="public/js/student-dashboard.js"></script>
+</body>
+</html> 

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Hostel Management - Login</title>
+    <link rel="stylesheet" href="public/css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <h1>Campus Hostel Management</h1>
+            <div class="nav-links">
+                <a href="index.html" class="active">Login</a>
+                <a href="register.html">Register</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="auth-container">
+            <h2>Login</h2>
+            <form id="loginForm" class="auth-form">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+            <p class="auth-switch">
+                Don't have an account? <a href="register.html">Register here</a>
+            </p>
+        </div>
+    </main>
+
+    <script src="public/js/app.js"></script>
+    <script src="public/js/auth.js"></script>
+</body>
+</html> 
